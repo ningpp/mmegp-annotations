@@ -32,4 +32,11 @@ public @interface Generated {
      * table name
      */
     String table();
+
+    /**
+     * seperate multi columns by seperator=, 
+     * @return
+     */
+    String[] countGroupByColumns() default {};
+
 }
