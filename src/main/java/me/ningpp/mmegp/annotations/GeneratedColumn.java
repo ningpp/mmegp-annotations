@@ -26,6 +26,8 @@ import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.TypeHandler;
 import org.apache.ibatis.type.UnknownTypeHandler;
 
+import me.ningpp.mmegp.enums.AggregateFunction;
+
 @Documented
 @Inherited
 @Target({ ElementType.FIELD })
@@ -61,4 +63,10 @@ public @interface GeneratedColumn {
      * primary key is generated value
      */
     boolean generatedValue() default false;
+
+    /**
+     * aggregate functions on this column
+     */
+    AggregateFunction[] aggregates() default {};
+
 }
