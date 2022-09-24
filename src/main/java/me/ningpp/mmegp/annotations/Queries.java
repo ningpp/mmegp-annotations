@@ -22,21 +22,14 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import me.ningpp.mmegp.enums.QueryType;
+
 @Documented
 @Inherited
+@Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.TYPE })
-public @interface Generated {
+public @interface Queries {
 
-    /**
-     * table name
-     */
-    String table();
-
-    /**
-     * seperate multi columns by seperator=, 
-     * @return
-     */
-    String[] countGroupByColumns() default {};
+    QueryType[] types() default {};
 
 }
