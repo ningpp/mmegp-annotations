@@ -22,14 +22,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import me.ningpp.mmegp.enums.QueryType;
-
 @Documented
 @Inherited
 @Target({ ElementType.TYPE, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Queries {
+public @interface MultiQueries {
 
-    QueryType[] types() default {};
+    MultiQuery[] value() default {};
 
 }

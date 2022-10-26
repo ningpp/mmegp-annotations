@@ -16,7 +16,6 @@
 package me.ningpp.mmegp.annotations;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -26,10 +25,12 @@ import me.ningpp.mmegp.enums.QueryType;
 
 @Documented
 @Inherited
-@Target({ ElementType.TYPE, ElementType.FIELD })
+@Target({ })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Queries {
+public @interface MultiQuery {
 
-    QueryType[] types() default {};
+    String[] columns();
+
+    QueryType[] types();
 
 }
