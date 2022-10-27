@@ -33,4 +33,5 @@ public @interface MultiQuery {
 
     QueryType[] types();
 
+    String property() default "";
 }
