@@ -21,6 +21,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import me.ningpp.mmegp.enums.LogicalOperator;
 import me.ningpp.mmegp.enums.QueryType;
 
 @Documented
@@ -34,4 +35,8 @@ public @interface MultiQuery {
     QueryType[] types();
 
     String property() default "";
+
+    LogicalOperator columnLogicalOperator() default LogicalOperator.AND;
+
+    LogicalOperator valueLogicalOperator() default LogicalOperator.OR;
 }
