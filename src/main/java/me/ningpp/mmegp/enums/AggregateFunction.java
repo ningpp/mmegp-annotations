@@ -21,6 +21,11 @@ package me.ningpp.mmegp.enums;
 public enum AggregateFunction {
 
     /**
+     * count(*)
+     */
+    COUNT,
+
+    /**
      * min(column_name)
      */
     MIN,
